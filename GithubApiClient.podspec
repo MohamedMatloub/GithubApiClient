@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GithubApiClient'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of GithubApiClient.'
   s.license          = 'MIT'
 
@@ -26,13 +26,13 @@ TODO: Add long description of the pod here.
   s.author           = { 'MohamedMatloub' => 'Mohamed.a.matloub@gmail.com' }
   s.source           = { :git => 'https://github.com/MohamedMatloub/GithubApiClient.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'GithubApiClient/**/*.{h,m}'
-  s.default_subspec = 'L'
+  s.default_subspecs = 'Default'
   
-  s.subspec 'L' do |l|
-    l.source_files = 'GithubApiClient/**/*.{h,m}'
+  s.subspec 'Default' do |s|
+    s.source_files = 'GithubApiClient/**/*.{h,m}'
   end
 
   s.subspec 'Networking' do |networking|
