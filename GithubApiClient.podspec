@@ -24,15 +24,17 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/MohamedMatloub/GithubApiClient'
   s.author           = { 'MohamedMatloub' => 'Mohamed.a.matloub@gmail.com' }
-  s.source           = { :http => 'https://github.com/MohamedMatloub/GithubApiClient/blob/master/GithubApiClient.framework.zip' }
+  s.source           = { :http => 'https://raw.githubusercontent.com/MohamedMatloub/GithubApiClient/master/GithubApiClient.framework.zip' }
+  # s.source           = { :git => 'https://github.com/MohamedMatloub/GithubApiClient.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
+  # s.source_files = 'GithubApiClient/**/*.{h}'
 
   s.ios.vendored_frameworks = 'GithubApiClient.framework'
   s.default_subspecs = 'Default'
   
   s.subspec 'Default' do |s|
-    s.homepage         = 'https://github.com/MohamedMatloub/GithubApiClient'
+    s.ios.vendored_frameworks = 'GithubApiClient.framework'
   end
 
   s.subspec 'Networking' do |networking|
