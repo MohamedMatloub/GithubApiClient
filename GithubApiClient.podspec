@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GithubApiClient'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A short description of GithubApiClient.'
   s.license          = 'MIT'
 
@@ -24,15 +24,15 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/MohamedMatloub/GithubApiClient'
   s.author           = { 'MohamedMatloub' => 'Mohamed.a.matloub@gmail.com' }
-  s.source           = { :git => 'https://github.com/MohamedMatloub/GithubApiClient.git', :tag => s.version.to_s }
+  s.source           = { :http => 'https://github.com/MohamedMatloub/GithubApiClient/blob/master/GithubApiClient.framework.zip' }
 
   s.ios.deployment_target = '10.0'
 
-  s.ios.vendored_frameworks = 'GithubApiClient/GithubApiClient.framework'
+  s.ios.vendored_frameworks = 'GithubApiClient.framework'
   s.default_subspecs = 'Default'
   
   s.subspec 'Default' do |s|
-    s.ios.vendored_frameworks = 'GithubApiClient/GithubApiClient.framework'
+    s.homepage         = 'https://github.com/MohamedMatloub/GithubApiClient'
   end
 
   s.subspec 'Networking' do |networking|
