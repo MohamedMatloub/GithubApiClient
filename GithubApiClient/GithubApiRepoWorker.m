@@ -12,7 +12,9 @@
 #import <AFNetworking/AFNetworking.h>
 
 @interface GithubApiRepoWorker ()
-@property (unsafe_unretained) Class afNetworkManagerClass;
+@property (unsafe_unretained) Class ntworkingClass;
+@property (unsafe_unretained) Class networkingClass;
+@property (unsafe_unretained) id sessionManagerClass;
 @end
 
 @implementation GithubApiRepoWorker
@@ -26,6 +28,8 @@
             failure:(nullable void (^)(NSError * _Nonnull))failure {
     
     if (NSClassFromString(@"AFHTTPSessionManager")) {
+        self.networkingClass = NSClassFromString(@"AFHTTPSessionManager");
+        self.sessionManagerClass = NSClassFromString(@"AFHTTPSessionManager");
         [self getRepos:username success:success failure:failure];
     } else {
         NSLog(@"Failed to find AFNetworking, plesae make sure you added AFNetworking as a dependancy by adding \n pod 'GithubApiClient/Networking'\n in your pod file");
@@ -36,10 +40,12 @@
 -(void) getRepos:(NSString *)username
          success: (nullable void (^)(NSArray<GithubRepo *> * _Nonnull))success
          failure:(nullable void (^)(NSError * _Nonnull))failure {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];    
+    
+    
+    self.sessionManagerClass = [self.networkingClass manager];
     NSString *url = [NSString stringWithFormat:@"https://api.github.com/users/%@/repos", username];
     
-    [manager GET: url parameters:nil headers: nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self.sessionManagerClass GET:url parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSArray *fetchedArr = responseObject;
         NSArray<GithubRepo *> *repos = [self getReposFrom: fetchedArr];
         success(repos);

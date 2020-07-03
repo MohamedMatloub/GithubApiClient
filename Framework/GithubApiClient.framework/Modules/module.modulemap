@@ -1,0 +1,6 @@
+framework module GithubApiClient {
+  umbrella header "GithubApiClient.h"
+
+  export *
+  module * { export * }
+}

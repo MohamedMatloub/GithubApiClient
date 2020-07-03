@@ -28,11 +28,11 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.ios.vendored_frameworks = 'GithubApiClient/GithubApiClient.framework'
+  s.source_files = 'GithubApiClient/**/*.{h,m}'
   s.default_subspecs = 'Default'
   
   s.subspec 'Default' do |s|
-    s.ios.vendored_frameworks = 'GithubApiClient/GithubApiClient.framework'
+    s.source_files = 'GithubApiClient/**/*.{h,m}'
   end
 
   s.subspec 'Networking' do |networking|

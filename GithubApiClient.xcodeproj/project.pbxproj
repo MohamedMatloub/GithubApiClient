@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011F8DAD24AFD5E600104615 /* GitHubApiClientError.h in Headers */ = {isa = PBXBuildFile; fileRef = 0182583724AF618B009DEAA2 /* GitHubApiClientError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		013F6B1F24AEC359002E4E3B /* GithubApiRepoWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 013F6B1A24AEC359002E4E3B /* GithubApiRepoWorker.m */; };
-		013F6B2124AEC359002E4E3B /* GithubRepo.h in Headers */ = {isa = PBXBuildFile; fileRef = 013F6B1D24AEC359002E4E3B /* GithubRepo.h */; };
+		013F6B2124AEC359002E4E3B /* GithubRepo.h in Headers */ = {isa = PBXBuildFile; fileRef = 013F6B1D24AEC359002E4E3B /* GithubRepo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		013F6B2224AEC359002E4E3B /* GithubRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 013F6B1E24AEC359002E4E3B /* GithubRepo.m */; };
-		013F6B2624AEC518002E4E3B /* GithubApiRepoWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 013F6B2524AEC518002E4E3B /* GithubApiRepoWorker.h */; };
+		013F6B2624AEC518002E4E3B /* GithubApiRepoWorker.h in Headers */ = {isa = PBXBuildFile; fileRef = 013F6B2524AEC518002E4E3B /* GithubApiRepoWorker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0182582F24AF58A5009DEAA2 /* GithubApiClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0182582E24AF58A5009DEAA2 /* GithubApiClientTests.m */; };
 		0182583124AF58A5009DEAA2 /* GithubApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013F6B0024AEC30F002E4E3B /* GithubApiClient.framework */; };
 		01F2A49124AF55A900F8274C /* GithubApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 013F6B0324AEC30F002E4E3B /* GithubApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -157,6 +158,7 @@
 			files = (
 				01F2A49124AF55A900F8274C /* GithubApiClient.h in Headers */,
 				013F6B2624AEC518002E4E3B /* GithubApiRepoWorker.h in Headers */,
+				011F8DAD24AFD5E600104615 /* GitHubApiClientError.h in Headers */,
 				013F6B2124AEC359002E4E3B /* GithubRepo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
