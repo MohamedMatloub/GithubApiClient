@@ -1,0 +1,18 @@
+PODS:
+  - GithubApiClient (1.0.1):
+    - GithubApiClient/Default (= 1.0.1)
+  - GithubApiClient/Default (1.0.1)
+
+DEPENDENCIES:
+  - GithubApiClient (= 1.0.1)
+
+SPEC REPOS:
+  trunk:
+    - GithubApiClient
+
+SPEC CHECKSUMS:
+  GithubApiClient: 2b2ac29b8141a4abc86b94193086aebf4a80596d
+
+PODFILE CHECKSUM: 9ca79739ef70dc11bd33fbaa8dc1c234cdd6e843
+
+COCOAPODS: 1.9.3
