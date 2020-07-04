@@ -37,6 +37,11 @@
     }
 }
 
+
+/// Search for repositories on github for a user
+/// @param username github username to search for
+/// @param success return array of repos for the sepicified user
+/// @param failure return Afnetworking failure error
 -(void) getRepos:(NSString *)username
          success: (nullable void (^)(NSArray<GithubRepo *> * _Nonnull))success
          failure:(nullable void (^)(NSError * _Nonnull))failure {
@@ -54,6 +59,9 @@
     }];
 }
 
+
+/// Convert json array into array of repos
+/// @param fetchedArr array of dictionary represents repo
 -(NSArray<GithubRepo *>*)getReposFrom:(NSArray*) fetchedArr {
     NSMutableArray<GithubRepo *> *repos = [[NSMutableArray alloc] init];
     for (NSDictionary *dict in fetchedArr) {
